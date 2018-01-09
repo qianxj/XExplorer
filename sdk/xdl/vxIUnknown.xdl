@@ -1,0 +1,17 @@
+#include "vxibase.xdl"
+
+%{C++
+#if 0
+%}
+
+[scriptenabled, uuid(E52B4A3D-2F18-4907-AB7E-86C05E413F93)]
+interface IUnknown{
+};
+
+%{C++
+#endif
+#define  XDECL_IUNKNOWN 
+#define  XFORWARD_IUNKNOWN(_to) 
+#define  XFORWARD_SAFE_IUNKNOWN(_to) 
+%}
+

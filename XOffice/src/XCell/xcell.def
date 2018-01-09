@@ -1,0 +1,5 @@
+LIBRARY	"XCell"
+
+EXPORTS
+    ; 此处可以是显式导出
+CreateInstance

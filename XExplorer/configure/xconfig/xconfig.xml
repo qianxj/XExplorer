@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="gb2312"?>
+<XDeveloper>
+	<edittemplate>
+		<file src="edittemplate.xml"></file>
+	</edittemplate>
+	<propSheet>
+		<file src="devsheet.xml"></file>
+	</propSheet>
+</XDeveloper>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="gb2312"?>
+<devSheet>
+	<item type="hxw">
+		<propSheet>
+			<row category="group" level="1" label="工作区" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="名称" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="目标文件" type="rcolumn" expand="true"/>
+		</propSheet>
+	</item>
+	<item type="hxd">
+		<propSheet>
+			<row category="group" level="1" label="项目" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="名称" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="目标文件" type="rcolumn" expand="true"/>
+		</propSheet>
+	</item>
+	<item type="clientFolder">
+		<propSheet>
+			<row category="group" level="1" label="通用" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="名称" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="分布目录" type="rcolumn" expand="true"/>
+		</propSheet>
+	</item>
+	<item type="xpageFile">
+		<propSheet>
+			<row category="group" level="1" label="通用" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="name" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="file" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="caption" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="type" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="xdll" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="guid" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="style" type="rcolumn" expand="true"/>
+		</propSheet>
+	</item>
+	<item type="xapplicationsvrFile">
+		<propSheet>
+			<row category="group" level="1" label="通用" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="服务器" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="端口号" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="启动参数" type="rcolumn" expand="true"/>
+		</propSheet>
+	</item>	
+	<item type="mailFile">
+		<propSheet>
+			<row category="group" level="1" label="通用" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="服务器" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="端口号" type="rcolumn" expand="true"/>
+		</propSheet>
+	</item>
+	<item type="messagerFile">
+		<propSheet>
+			<row category="group" level="1" label="通用" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="服务器" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="端口号" type="rcolumn" expand="true"/>
+			<row category="item" level="2" label="启动参数" type="rcolumn" expand="true"/>
+		</propSheet>
+	</item>	
+</devSheet>

@@ -1,0 +1,5 @@
+#ifndef WPP_DBCERROR_H
+#define WPP_DBCERROR_H
+
+
+#endif //WPP_DBCERROR_H

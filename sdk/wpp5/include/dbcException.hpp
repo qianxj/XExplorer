@@ -1,0 +1,5 @@
+#ifndef WPP_DBCEXCEPTION_H
+#define WPP_DBCEXCEPTION_H
+
+
+#endif //WPP_DBCEXCEPTION_H

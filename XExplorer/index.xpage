@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="gb2312"?>
+<xframe style="background:#0080c0" caption="Hxsoft XCell" type="main" rect="0,0,900,800" xdll="ExtExplorer.dll">
+<resource>
+	<ximagelist src="d:\qianxj\vc\hxcell\res\TASkVIEW.bmp" cx="16" cy="16" colormask="#ff0000"></ximagelist>
+	<ximagelist src="d:\qianxj\vc\hxcell\res\uri.bmp" cx="16" cy="16" colormask="#c0c0c0"></ximagelist>
+</resource>
+<box >
+	<box height="60" style="margin:0 0;background:#ccdccc">
+		<box>
+				<xtoolbutton image="1,1" caption="" width="20" style="" />
+				<xtoolbutton image="1,2" caption="" width="20"/>
+				<xspace width="2"/>
+				<xedit  style="border:solid 1 #808080;margin:3px"></xedit>
+				<xspace width="2"/>
+				<xtoolbutton image="-1" caption="Go"  width="20"/>
+				<xspace width="18"/>
+                                </box>
+		<box height="30" >
+			<box style="margin:1,2" width="430">
+				<xtoolbutton caption="文件(F)" width="60" name="xmFile">
+					<box alignarrow="we"  style="background:#ccdccc">
+						<xtoolbutton image="1" caption="新建(N)" name="xmFileNew" height="27"/>
+						<xtoolbutton image="2" caption="打开(N)" name="xmFileOpen"  height="27"/>
+						<xtoolbutton image="3" caption="关闭(O)"  height="27"/>
+						<xspace spmenu="yes"  height="2"/>
+						<xtoolbutton image="2" caption="保存(S)" height="27"/>
+						<xtoolbutton image="4" caption="另存为(A)..." height="27"/>
+						<xspace spmenu="yes" height="2"/>
+						<xtoolbutton image="5" caption="退出(X)" name="xmFileExit" height="27"/>
+					</box>
+				</xtoolbutton>
+				<xtoolbutton caption="编辑(E)" width="60" name="xmEdit">
+					<box alignarrow="we"  style="background:#ccdccc" height="110">
+						<xtoolbutton image="1" caption="Copy(U)" name="xmEditCopy" height="27"/>
+						<xtoolbutton image="2" caption="Paste(N)" name="xmEditPaste"  height="27"/>
+						<xtoolbutton image="3" caption="Cut(O)"  name="xmEditCut"  height="27"/>
+						<xspace spmenu="yes"  height="2"/>
+						<xtoolbutton image="2" caption="Select All(A)"  name="xmEditSelectAll" height="27"/>
+					</box>
+				</xtoolbutton>
+				<xtoolbutton caption="格式(O)" width="60"/>
+				<xtoolbutton caption="数据(D)" width="60"/>
+				<xtoolbutton caption="视图(V)" width="60"/>
+				<xtoolbutton caption="窗口(W)" width="60"/>
+				<xtoolbutton caption="帮助(H)" width="60"/>
+			</box>
+			<box  style="margin:1 2" >
+				<xtoolbutton image="0" caption="Open" width="60" style=""  name="xmFileOpen"/>
+				<xtoolbutton image="1" caption="Save" width="60"/>
+				<xspace width="2"/>
+				<xtoolbutton image="2" caption="Print" width="60"/>
+				<xtoolbutton image="3" caption="PrintView" width="80"/>
+				<xspace width="2"/>
+				<xtoolbutton image="7" caption="Exit"  width="60"/>
+				<xspace width="4"/>
+			</box>
+		</box>
+	</box>
+	<box style="margin:1">
+		<box width="120" size="yes" style="margin:1 0 0 0"></box>
+		<box><xmdiclient/></box>
+	</box>
+</box>
+<box height="20" >
+	<xstatusbar/>
+</box>
+	
+</xframe>

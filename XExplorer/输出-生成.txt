@@ -1,0 +1,22 @@
+1>------ 已启动生成: 项目: XBase, 配置: Debug Win32 ------
+1>正在执行预生成事件...
+1>include\XBase.h
+1>include\xbCache.hpp
+1>include\xbError.hpp
+1>include\xbEvent.hpp
+1>include\xbObject.hpp
+1>include\xbObjectLog.hpp
+1>include\xbObjectMgr.hpp
+1>include\xbObserver.hpp
+1>include\xbXBase.h
+1>include\xbXml.hpp
+1>复制了 10 个文件
+1>正在编译...
+1>xbObject.cpp
+1>正在链接...
+1>   正在创建库 ..\sdk\lib\XBase.lib 和对象 ..\sdk\lib\XBase.exp
+1>正在嵌入清单...
+1>正在执行生成后事件...
+1>生成日志保存在“file://d:\qianxj\vc\XArch\build\XBase\Debug\BuildLog.htm”
+1>XBase - 0 个错误，0 个警告
+========== 生成: 1 已成功, 0 已失败, 0 最新, 0 已跳过 ==========

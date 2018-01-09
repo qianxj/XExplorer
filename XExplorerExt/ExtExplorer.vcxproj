@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>XExplorerExt</ProjectName>
+    <ProjectGuid>{78A27445-D3B8-4FA1-A10E-F0AEAC96FFDA}</ProjectGuid>
+    <RootNamespace>ExtExplorer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\bin\ext\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\build\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\bin\ext\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\build\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>xcopy entit*.h ..\sdk\include  /y</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;.;..\sdk\include;..\sdk\xsm\include;..\sdk\include\scintilla\include;..\..\xsharp\sdk\include\xsm;..\sdk\js\include;..\sdk\v8\include;..\sdk\vl\include;..\sdk\xsm\include\xsm;..\XUtil\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;EXTEXPLORER_EXPORTS;JS_SUPPER;JS_V8_UNDEF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>msxml2.lib;Msimg32.lib;comctl32.lib;UxTheme.lib;Ws2_32.lib;xutil.lib;hxsock.lib;xframe.lib;xbase.lib;xcontrol.lib;xoffice.lib;xreport.lib;xofbase.lib;xcell.lib;xofobject.lib;xflowchart.lib;xvm.lib;xsm.lib;mozjs.lib;v8_g.lib;vlang.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\sdk\lib;..\sdk\js\lib;..\sdk\v8\lib;..\sdk\vl\lib;..\sdk\xsm\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>ExtExplorer.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)..\..\build\pdb\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>..\sdk\lib\$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>del ..\bin\ext\*.ilk</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;.;..\sdk\include;..\..\xsharp\sdk\include;..\sdk\include\scintilla\include;..\..\xsharp\sdk\include\xsm;..\sdk\js\include;..\sdk\v8\include;..\sdk\vl\include;..\sdk\xsm\include;..\sdk\xsm\include\xsm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;EXTEXPLORER_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>msxml2.lib;Msimg32.lib;comctl32.lib;UxTheme.lib;Ws2_32.lib;xutil.lib;hxsock.lib;xframe.lib;xbase.lib;xcontrol.lib;xoffice.lib;xreport.lib;xofbase.lib;xcell.lib;xofobject.lib;xflowchart.lib;xvm.lib;xsm.lib;mozjs.lib;v8_g.lib;vlang.lib;wpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\sdk\lib;..\..\xsharp\sdk\lib;..\sdk\js\lib;..\sdk\v8\lib;..\sdk\vl\lib;..\sdk\xsm\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>ExtExplorer.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)..\..\build\pdb\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>..\sdk\lib\$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AuthWin.cpp" />
+    <ClCompile Include="ChatWnd.cpp" />
+    <ClCompile Include="DataAnalysis.cpp" />
+    <ClCompile Include="DataSchemaDlg.cpp" />
+    <ClCompile Include="DefaultView.cpp" />
+    <ClCompile Include="DevFrame.cpp" />
+    <ClCompile Include="DevSchema.cpp" />
+    <ClCompile Include="DevView.cpp" />
+    <ClCompile Include="DevWorkDlg.cpp" />
+    <ClCompile Include="DevXQuery.cpp" />
+    <ClCompile Include="EntityExplorer.cpp" />
+    <ClCompile Include="EntityList.cpp" />
+    <ClCompile Include="EntityMaint.cpp" />
+    <ClCompile Include="ExtExplorer.cpp" />
+    <ClCompile Include="FavoritesDlg.cpp" />
+    <ClCompile Include="MailView.cpp" />
+    <ClCompile Include="MdiFrame.cpp" />
+    <ClCompile Include="ModulaDlg.cpp" />
+    <ClCompile Include="officeFrame.cpp" />
+    <ClCompile Include="rulersheet.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TaskDlg.cpp" />
+    <ClCompile Include="TemplateDlg.cpp" />
+    <ClCompile Include="WorkFrame.cpp" />
+    <ClCompile Include="WorkNodeDlg.cpp" />
+    <ClCompile Include="WorkStart.cpp" />
+    <ClCompile Include="WorkStartex.cpp" />
+    <ClCompile Include="xCodeSheet.cpp" />
+    <ClCompile Include="xdvsheet.cpp" />
+    <ClCompile Include="xfilesheet.cpp" />
+    <ClCompile Include="xmodesheet.cpp" />
+    <ClCompile Include="xPageSheet.cpp" />
+    <ClCompile Include="xXmlsheet.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtExplorer.def" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AuthWin.h" />
+    <ClInclude Include="ChatWnd.h" />
+    <ClInclude Include="DataAnalysis.h" />
+    <ClInclude Include="DataSchemaDlg.h" />
+    <ClInclude Include="DefaultView.h" />
+    <ClInclude Include="DevFrame.h" />
+    <ClInclude Include="DevSchema.h" />
+    <ClInclude Include="DevView.h" />
+    <ClInclude Include="DevWorkDlg.h" />
+    <ClInclude Include="DevXQuery.h" />
+    <ClInclude Include="EntityExplorer.h" />
+    <ClInclude Include="EntityList.h" />
+    <ClInclude Include="EntityMaint.h" />
+    <ClInclude Include="FavoritesDlg.h" />
+    <ClInclude Include="MailView.h" />
+    <ClInclude Include="MdiFrame.h" />
+    <ClInclude Include="ModulaDlg.h" />
+    <ClInclude Include="officeFrame.h" />
+    <ClInclude Include="rulerSheet.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TaskDlg.h" />
+    <ClInclude Include="TemplateDlg.h" />
+    <ClInclude Include="WorkFrame.h" />
+    <ClInclude Include="WorkNodeDlg.h" />
+    <ClInclude Include="WorkStart.h" />
+    <ClInclude Include="WorkStartex.h" />
+    <ClInclude Include="xCodeSheet.h" />
+    <ClInclude Include="xdvSheet.h" />
+    <ClInclude Include="xfileSheet.h" />
+    <ClInclude Include="xmodeSheet.h" />
+    <ClInclude Include="xPageSheet.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

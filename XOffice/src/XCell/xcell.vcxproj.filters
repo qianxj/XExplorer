@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="源文件\src">
+      <UniqueIdentifier>{ca0867f8-e6be-40cd-9fea-868c731ab96d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\grid">
+      <UniqueIdentifier>{231b73a0-212c-41a8-aaa7-b5b1b126fee4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\bireport">
+      <UniqueIdentifier>{4088ac88-66d6-400c-a1b2-5a546c95f964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="头文件\include">
+      <UniqueIdentifier>{baa3e759-25bd-4a87-931c-33ce2938285c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\gird">
+      <UniqueIdentifier>{6678aa46-c70a-4d00-a368-6ab8d0db913e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\bireport">
+      <UniqueIdentifier>{98b9cbef-5904-47a6-a15b-ff4a5edaed37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xcell.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AttribSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AxisSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CellProp.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CellSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ColHeaderSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ContentSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataStoreSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DwTable.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EditSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FormatSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FormulaSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GridDataSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GridFrameSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hxComplier.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IDwTable.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IXCell.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NameSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NoteSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\optionsvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ReportBand.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RowSelectorSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SpanRectSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TemplDefSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XCellQueryDlg.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XCellSerializeSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XCellSheet.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XCellSheetSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XCellStyleSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XGroupDlg.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IGridReport.cpp">
+      <Filter>源文件\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XGridDataSvrEx.cpp">
+      <Filter>源文件\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XGridEditSvr.cpp">
+      <Filter>源文件\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XGridHeaderEx.cpp">
+      <Filter>源文件\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XGridReport.cpp">
+      <Filter>源文件\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XGridRowSelector.cpp">
+      <Filter>源文件\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XGridSheetEx.cpp">
+      <Filter>源文件\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XGridSheetSvrEx.cpp">
+      <Filter>源文件\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IBIReport.cpp">
+      <Filter>源文件\bireport</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XBIReportDataSvr.cpp">
+      <Filter>源文件\bireport</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XBIReportObject.cpp">
+      <Filter>源文件\bireport</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XBIReportSerializeSvr.cpp">
+      <Filter>源文件\bireport</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XBIReportSheet.cpp">
+      <Filter>源文件\bireport</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XBIReportSheetSvr.cpp">
+      <Filter>源文件\bireport</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="xcell.def">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="..\..\..\..\cell\cellbase\res\ArrowNS.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ArrowNS.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\..\..\..\cell\cellbase\res\ArrowWE.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ArrowWE.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\..\..\..\cell\cellbase\res\Clear.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Clear.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\..\..\..\cell\cellbase\res\Filling.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\filling.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Move.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Moving.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\..\..\..\cell\cellbase\res\Pen.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Pen.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\PENCIL.CUR">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\..\..\..\cell\cellbase\res\PENCIL.CUR">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AddrSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AttribSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AxisSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CellProp.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CellSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ColHeaderSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ContentSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DataStoreSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DwTable.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EditSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FormatSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FormulaSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GridDataSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GridFrameSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\hxComplier.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IDwTable.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IDwTableObServer.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IDWView.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IXCell.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NameSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\NoteSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OptionSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ReportBand.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RowSelectorSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SpanRectSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TemplDefSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcell.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcelldef.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XCellQueryDlg.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XCellSerializeSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XCellSheet.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XCellSheetSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XCellStyleSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XGroupDlg.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IGridReport.hpp">
+      <Filter>头文件\gird</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IGridReportObserver.hpp">
+      <Filter>头文件\gird</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XGridDataSvrEx.hpp">
+      <Filter>头文件\gird</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XGridEditSvr.hpp">
+      <Filter>头文件\gird</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XGridHeaderEx.hpp">
+      <Filter>头文件\gird</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XGridReport.hpp">
+      <Filter>头文件\gird</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XGridRowSelector.hpp">
+      <Filter>头文件\gird</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XGridSheetEx.hpp">
+      <Filter>头文件\gird</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XGridSheetSvrEx.hpp">
+      <Filter>头文件\gird</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IBIReport.hpp">
+      <Filter>头文件\bireport</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XBIReportDataSvr.hpp">
+      <Filter>头文件\bireport</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XBIReportObject.hpp">
+      <Filter>头文件\bireport</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XBIReportSerializeSvr.hpp">
+      <Filter>头文件\bireport</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XBIReportSheet.hpp">
+      <Filter>头文件\bireport</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XBIReportSheetSvr.hpp">
+      <Filter>头文件\bireport</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="XCell.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

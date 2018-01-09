@@ -1,0 +1,4 @@
+#ifndef WPP_DECODER32_H
+#define WPP_DECODER32_H
+
+#endif //WPP_DECODER32_H

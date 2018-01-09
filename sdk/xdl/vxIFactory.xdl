@@ -1,0 +1,15 @@
+#include "vxiobject.xdl"
+
+%{C++
+namespace Hxsoft{ namespace XFrame
+{ 
+%}
+
+[scriptenabled, uuid(173308DC-29BC-43f7-BBCC-DDDDB0A8FC16),notxpcom]
+interface vxIFactory : vxIObject{
+		LPVOID createObject(in IIDREF  guid);
+};
+
+%{C++
+}}
+%}

@@ -1,0 +1,1 @@
+OBJS = c:\ff-debug\modules\libreg\src\reg.obj c:\ff-debug\modules\libreg\src\VerReg.obj c:\ff-debug\modules\libreg\src\vr_stubs.obj c:\ff-debug\modules\libreg\src\nr_bufio.obj

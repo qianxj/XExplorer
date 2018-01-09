@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="XShape">
+  <Description></Description>
+  <VirtualDirectory Name="src">
+    <File Name="ReadMe.txt"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="include"/>
+  <Dependencies/>
+  <Settings Type="Dynamic Library">
+    <GlobalSettings>
+      <Compiler Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g" Required="yes">
+        <IncludePath Value=".."/>
+        <IncludePath Value="."/>
+        <IncludePath Value=".\include"/>
+        <IncludePath Value="..\sdk\include"/>
+        <IncludePath Value="..\dev\include"/>
+        <Preprocessor Value="WIN32"/>
+        <Preprocessor Value="_DEBUG"/>
+        <Preprocessor Value="_WINDOWS"/>
+        <Preprocessor Value="_USRDLL"/>
+        <Preprocessor Value="XSHAPE_EXPORTS"/>
+      </Compiler>
+      <Linker Options="-O0" Required="yes">
+        <LibraryPath Value="..\sdk\lib"/>
+        <Library Value="xbase.lib"/>
+        <Library Value="xutil.lib"/>
+        <Library Value="msxml2.lib"/>
+        <Library Value="Msimg32.lib"/>
+        <Library Value="shlwapi.lib"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="" IntermediateDirectory="..\build\$(ProjectName)\$(ConfigurationName)" Command="" CommandArguments="" WorkingDirectory="./Debug" PauseExecWhenProcTerminates="yes"/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands></PostConnectCommands>
+        <StartupCommands></StartupCommands>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <CleanCommand></CleanCommand>
+        <BuildCommand></BuildCommand>
+        <PreprocessFileCommand></PreprocessFileCommand>
+        <SingleFileCommand></SingleFileCommand>
+        <MakefileGenerationCommand></MakefileGenerationCommand>
+        <ThirdPartyToolName></ThirdPartyToolName>
+        <WorkingDirectory></WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild></CustomPostBuild>
+        <CustomPreBuild></CustomPreBuild>
+      </AdditionalRules>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g" Required="yes">
+        <IncludePath Value="..\include"/>
+        <IncludePath Value="."/>
+        <IncludePath Value="..\sdk\include"/>
+        <Preprocessor Value="WIN32"/>
+        <Preprocessor Value="NDEBUG"/>
+        <Preprocessor Value="_WINDOWS"/>
+        <Preprocessor Value="_USRDLL"/>
+        <Preprocessor Value="XSHAPE_EXPORTS"/>
+      </Compiler>
+      <Linker Options="-O0" Required="yes">
+        <LibraryPath Value="..\sdk\lib"/>
+        <Library Value="xbase.lib"/>
+        <Library Value="xutil.lib"/>
+        <Library Value="msxml2.lib"/>
+        <Library Value="Msimg32.lib"/>
+        <Library Value="shlwapi.lib"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="" IntermediateDirectory="..\build\$(ProjectName)\$(ConfigurationName)" Command="" CommandArguments="" WorkingDirectory="./Debug" PauseExecWhenProcTerminates="yes"/>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands></PostConnectCommands>
+        <StartupCommands></StartupCommands>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <CleanCommand></CleanCommand>
+        <BuildCommand></BuildCommand>
+        <PreprocessFileCommand></PreprocessFileCommand>
+        <SingleFileCommand></SingleFileCommand>
+        <MakefileGenerationCommand></MakefileGenerationCommand>
+        <ThirdPartyToolName></ThirdPartyToolName>
+        <WorkingDirectory></WorkingDirectory>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild></CustomPostBuild>
+        <CustomPreBuild></CustomPreBuild>
+      </AdditionalRules>
+    </Configuration>
+  </Settings>
+  <VirtualDirectory Name="€€€€€€">
+    <File Name="stdafx.cpp"/>
+    <File Name="XShape.cpp"/>
+    <VirtualDirectory Name="src">
+      <File Name="src\XShapeDrawObject.cpp"/>
+      <File Name="src\XShapeMgr.cpp"/>
+      <File Name="src\XShapeObject.cpp"/>
+      <File Name="src\XShapeObjectSet.cpp"/>
+      <File Name="src\XShapeObjectSetItem.cpp"/>
+    </VirtualDirectory>
+    <File Name="stdafx.h"/>
+    <VirtualDirectory Name="include">
+      <File Name="include\XShape.h"/>
+      <File Name="include\XShapeDrawObject.hpp"/>
+      <File Name="include\XShapeMgr.hpp"/>
+      <File Name="include\XShapeObject.hpp"/>
+      <File Name="include\XShapeObjectSet.hpp"/>
+      <File Name="include\XShapeObjectSetItem.hpp"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <VirtualDirectory Name="€€€€€€€€"/>
+</CodeLite_Project>

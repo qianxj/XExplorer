@@ -1,0 +1,224 @@
+#pragma once
+#include <xframe.h>
+
+namespace Hxsoft
+{
+	namespace XFrame
+	{
+		class CByteStream : 
+			public IStream
+		{
+		public:
+			CByteStream(BYTE *pBytes,ULONG nByteSize) throw()
+			{
+				//ATLASSERT(pBytes);
+				m_pArray = pBytes;
+				m_dwRead = 0;
+				m_nRef = 1;
+				m_nByteSize = nByteSize;
+			}
+
+			~CByteStream()
+			{
+				if(m_pArray)delete m_pArray;
+			}
+		public:
+			ULONG m_nRef;
+		public:
+			BYTE *m_pArray;
+			ULONG m_nByteSize;
+			DWORD m_dwRead;
+
+
+			STDMETHOD(Read)(void *pv, ULONG cb, ULONG *pcbRead) throw()
+			{
+				if (!pv)
+					return E_INVALIDARG;
+
+				if (cb == 0)
+					return S_OK;
+
+				if (!m_pArray)
+					return E_UNEXPECTED;
+
+				BYTE *pCurr  = m_pArray;
+				pCurr += m_dwRead;
+				if(m_dwRead + cb > m_nByteSize) cb = m_nByteSize - m_dwRead;
+				if(cb > 0) /*Checked::*/memcpy_s(pv, cb, pCurr, cb);
+				if (pcbRead)
+					*pcbRead = cb;
+				m_dwRead += cb;
+				return S_OK;
+			}
+
+			STDMETHOD(Write)(const void* , ULONG , ULONG* ) throw()
+			{
+				return E_UNEXPECTED;
+			}
+
+			STDMETHOD(Seek)(LARGE_INTEGER dlibMove , DWORD dwOrigin, ULARGE_INTEGER * plibNewPosition) throw()
+			{
+				switch(dwOrigin)
+				{
+				case STREAM_SEEK_SET :
+					m_dwRead = dlibMove.LowPart;
+					break;
+				case STREAM_SEEK_CUR:
+					m_dwRead += dlibMove.LowPart;
+					break;
+				case STREAM_SEEK_END:
+					m_dwRead = m_nByteSize -  dlibMove.LowPart;
+					break;
+				}
+				if(m_dwRead <0) m_dwRead=0;
+				if(m_dwRead > m_nByteSize) m_dwRead = m_nByteSize;
+				if(plibNewPosition)
+				{
+					plibNewPosition->LowPart = m_dwRead;
+					plibNewPosition->HighPart = 0;
+				}
+				return S_OK;
+			}
+
+			STDMETHOD(SetSize)(ULARGE_INTEGER ) throw()
+			{
+				return E_NOTIMPL;
+			}
+
+			STDMETHOD(CopyTo)(IStream *, ULARGE_INTEGER , ULARGE_INTEGER *,
+				ULARGE_INTEGER *) throw()
+			{
+				return E_NOTIMPL;
+			}
+
+			STDMETHOD(Commit)(DWORD ) throw()
+			{
+				return E_NOTIMPL;
+			}
+
+			STDMETHOD(Revert)( void) throw()
+			{
+				return E_NOTIMPL;
+			}
+
+			STDMETHOD(LockRegion)(ULARGE_INTEGER , ULARGE_INTEGER , DWORD ) throw()
+			{
+				return E_NOTIMPL;
+			}
+
+			STDMETHOD(UnlockRegion)(ULARGE_INTEGER , ULARGE_INTEGER ,
+				DWORD ) throw()
+			{
+				return E_NOTIMPL;
+			}
+
+			STDMETHOD(Stat)(STATSTG * pStat, DWORD grfStatFlag) throw()
+			{
+				if(!pStat) return STG_E_INVALIDPOINTER;
+
+				memset(pStat,0,sizeof(STATSTG));
+				pStat->cbSize.HighPart = 0;
+				pStat->cbSize.LowPart = this->m_nByteSize;
+				pStat->type = STGTY_STREAM;
+				return S_OK;
+			}
+
+			STDMETHOD(Clone)(IStream **) throw()
+			{
+				return E_NOTIMPL;
+			}
+
+			STDMETHOD(QueryInterface)(REFIID iid, void **ppUnk) throw()
+			{
+				*ppUnk = NULL;
+				if (::InlineIsEqualGUID(iid, IID_IUnknown) ||
+					::InlineIsEqualGUID(iid, IID_ISequentialStream) ||
+					::InlineIsEqualGUID(iid, IID_IStream))
+				{
+					*ppUnk = (void*)(IStream*)this;
+					AddRef();
+					return S_OK;
+				}
+				return E_NOINTERFACE;
+			}
+
+			ULONG STDMETHODCALLTYPE AddRef( void)  throw()
+			{
+				return (ULONG)m_nRef++;
+			}
+
+			ULONG STDMETHODCALLTYPE Release( void)  throw()
+			{
+				m_nRef--;
+				if(m_nRef==0)
+					delete this;
+				return (ULONG)m_nRef;
+			}
+		};
+
+		#define	IMG_LDBCLICK   WM_USER + 0x100;
+		#define	IMG_MOUSELEAVE   WM_USER + 0x101;
+		#define	IMG_LCLICK   WM_USER + 0x102;
+		#define	IMG_LABEL   WM_USER + 0x103;
+
+		struct 	IMGNNMHDR : public NMHDR
+		{
+			LPTSTR path;
+			LPTSTR text;
+			int index;
+		};
+
+		class XCONTROL_API xcImage:
+			public xfControl
+		{
+		public:	xcImage();
+				~xcImage();
+		public:
+			virtual int DoDraw(HDC hPaintDC,RECT * rc);
+			virtual	void Initial();
+			virtual	void Initial(IXMLDOMElement * pElement);
+		public:
+			virtual bool EvtPaint(TEvent* pEvent,LPARAM lParam);
+			virtual bool EvtLButtonDown(TEvent* pEvent,LPARAM lParam);
+			virtual bool EvtLButtonUp(TEvent* pEvent,LPARAM lParam);
+			virtual bool EvtMouseMove(TEvent* pEvent,LPARAM lParam);
+			virtual bool EvtMouseWheel(TEvent *pEvent ,LPARAM lParam);
+			virtual bool EvtVScroll(TEvent *pEvent ,LPARAM lParam);
+			virtual bool EvtHScroll(TEvent *pEvent ,LPARAM lParam);
+			virtual bool EvtDoubleClicked(TEvent *pEvent ,LPARAM lParam);
+			virtual bool EvtTimer(TEvent *pEvent ,LPARAM lParam);
+			virtual bool EvtKeyDown(TEvent *pEvent ,LPARAM lParam);
+			virtual bool EvtChar(TEvent *pEvent ,LPARAM lParam);
+			virtual bool EvtMouseLeave(TEvent *pEvent ,LPARAM lParam);
+		public:
+			POINT m_TopLeft;
+		public:
+			//ULONG_PTR           gdiplusToken ;
+		public:
+			int TopLeftMoved(POINT pt);
+		public:
+			CByteStream* pStream;
+			void*  m_pImage;
+			LPTSTR m_pSrc;
+
+		public:
+			bool LoadFromByte(byte * pData,int nLen);
+			bool LoadFromUrl(LPCTSTR pServerUrl,LPCTSTR pUrl);
+			bool LoadFromFile(LPCTSTR pFile);
+
+			bool SaveToFile(LPTSTR pFile=NULL);
+			bool SaveToFileEx(LPTSTR pFile);
+		public:
+			xbObject * GetInterface();
+		public:
+			virtual SIZE GetContentExtent();
+		public:
+			int m_nMaxWidth;
+			int m_nMaxHeight;
+			bool m_bScroolbar;
+			void UpdateScrollPos();
+			void ModifyScrollBar(int ScrollBar, int ScrollCode, int Pos);
+
+		};
+	}
+}

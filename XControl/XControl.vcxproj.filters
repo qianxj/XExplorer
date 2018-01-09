@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="源文件\src">
+      <UniqueIdentifier>{f24c0a3f-b467-442e-a787-b54c028aa299}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="头文件\inlcude">
+      <UniqueIdentifier>{7fdbb082-1e53-4892-b42b-4e69e11ade6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="XSciLexer">
+      <UniqueIdentifier>{cde212a8-f67b-4f73-b4bb-fa56a57b5579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XSciLexer\include">
+      <UniqueIdentifier>{7ba68a8d-e1ba-4a08-af56-7744ad22e024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XSciLexer\src">
+      <UniqueIdentifier>{cabd7b41-f9e8-451a-a09d-375c1381aae9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XSciLexer\src\scintilla">
+      <UniqueIdentifier>{066a61ef-6d8a-48a8-a35c-05dcf58f2366}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XSciLexer\src\scintilla\win32">
+      <UniqueIdentifier>{1b2fd20d-1691-49eb-9a5c-8fdafc0aa030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="html">
+      <UniqueIdentifier>{fa1b4a4f-721d-4d84-b689-4d4c2a50caf6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="XControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ILayerSheet.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IXImage.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IXImageView.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IXPages.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IXScrollBox.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="include\IXSEdit.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IXSHtml.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IXZoomer.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcEditSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcFile.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcImage.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcImageView.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcLabel.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcLayerSheet.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XCodeFindDlg.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcOleControlContain.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcPages.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcPropSheet.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcScrollBox.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcShapeIcon.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcSHtml.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcSourceEdit.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcSourceEditEx.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcSpliterBar.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcToolButton.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcTreeCtrl.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcTreeDataSource.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcTreeXmlDataSource.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcViewd3d.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcWCControl.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xcZoomer.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\Exporters.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\FilePath.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\IFaceTable.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\MultiplexExtension.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\PropSetFile.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\SciTEBase.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\SciTEBuffers.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\SciTEIO.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\SciTEProps.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\SciTEWin.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\SciTEWinDlg.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\StringList.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\UniqueInstance.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\Utf8_16.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\WinMutex.cxx">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\XSEdit.cpp">
+      <Filter>XSciLexer\src</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\JobQueue.cxx">
+      <Filter>XSciLexer\src\scintilla</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\scintilla\src\PropSet.cxx">
+      <Filter>XSciLexer\src\scintilla</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\scintilla\src\UniConversion.cxx">
+      <Filter>XSciLexer\src\scintilla</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\scintilla\src\WindowAccessor.cxx">
+      <Filter>XSciLexer\src\scintilla</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\scintilla\src\XPM.cxx">
+      <Filter>XSciLexer\src\scintilla</Filter>
+    </ClCompile>
+    <ClCompile Include="XSciLexer\scintilla\win32\PlatWin.cxx">
+      <Filter>XSciLexer\src\scintilla\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="html\HtTableAxis.cpp">
+      <Filter>html</Filter>
+    </ClCompile>
+    <ClCompile Include="html\HtTableContent.cpp">
+      <Filter>html</Filter>
+    </ClCompile>
+    <ClCompile Include="html\HtTableData.cpp">
+      <Filter>html</Filter>
+    </ClCompile>
+    <ClCompile Include="html\HtTableSpan.cpp">
+      <Filter>html</Filter>
+    </ClCompile>
+    <ClCompile Include="html\HtTableStyle.cpp">
+      <Filter>html</Filter>
+    </ClCompile>
+    <ClCompile Include="html\HtTableView.cpp">
+      <Filter>html</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="xcontrol.def">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ILayerSheet.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IXImage.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IXPages.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IXScrollBox.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IXSEdit.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IXSHtml.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IXZoomer.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcAgentEdit.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcControl.h">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcEditSvr.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcFile.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcImage.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcImageView.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcLabel.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcLayerSheet.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcListWin.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XCodeFindDlg.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcOleControlContain.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcPages.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcPropSheet.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcScrollBox.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcShapeIcon.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcSHtml.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcSourceEdit.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcSourceEditEx.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcSpliterBar.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcToolButton.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcTreeCtrl.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcTreeDataSource.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcTreeXmlDataSource.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcViewd3d.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcWCControl.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xcZoomer.hpp">
+      <Filter>头文件\inlcude</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\Extender.h">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\FilePath.h">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\IFaceTable.h">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\JobQueue.h">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\MultiplexExtension.h">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\Mutex.h">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\PropSetFile.h">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\SciTEBase.h">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\SciTEKeys.h">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\SciTEWin.h">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\StringList.h">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\UniqueInstance.h">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\Utf8_16.h">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="XSciLexer\XSEdit.hpp">
+      <Filter>XSciLexer\include</Filter>
+    </ClInclude>
+    <ClInclude Include="html\HtTableAxis.hpp">
+      <Filter>html</Filter>
+    </ClInclude>
+    <ClInclude Include="html\HtTableContent.hpp">
+      <Filter>html</Filter>
+    </ClInclude>
+    <ClInclude Include="html\HtTableData.hpp">
+      <Filter>html</Filter>
+    </ClInclude>
+    <ClInclude Include="html\HtTableSpan.hpp">
+      <Filter>html</Filter>
+    </ClInclude>
+    <ClInclude Include="html\HtTableStyle.hpp">
+      <Filter>html</Filter>
+    </ClInclude>
+    <ClInclude Include="html\HtTableView.hpp">
+      <Filter>html</Filter>
+    </ClInclude>
+    <ClInclude Include="html\IHtTableAxis.hpp">
+      <Filter>html</Filter>
+    </ClInclude>
+    <ClInclude Include="html\IHtTableContent.hpp">
+      <Filter>html</Filter>
+    </ClInclude>
+    <ClInclude Include="html\IHtTableData.hpp">
+      <Filter>html</Filter>
+    </ClInclude>
+    <ClInclude Include="html\IHtTableSpan.hpp">
+      <Filter>html</Filter>
+    </ClInclude>
+    <ClInclude Include="html\IHtTableStyle.hpp">
+      <Filter>html</Filter>
+    </ClInclude>
+    <ClInclude Include="html\IHtTableView.hpp">
+      <Filter>html</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

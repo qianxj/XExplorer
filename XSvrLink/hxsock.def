@@ -1,0 +1,16 @@
+LIBRARY	"hxsock.dll"
+
+EXPORTS
+	SysInitLibrary
+	SysCleanupLibrary
+	SysCreateSocket
+	SysCloseSocket
+	SysRecvData
+	SysRecv
+	SysSendData 
+	SysSend
+	SysSendFile
+	SysConnect
+	MscGetServerAddress
+	SysSetupAddress
+	SysGetHostByName

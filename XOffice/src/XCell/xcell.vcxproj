@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8CB72726-47D7-4235-833D-B6B63FD96DA6}</ProjectGuid>
+    <RootNamespace>xcell</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\build\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\build\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>xcopy include ..\..\..\sdk\include  /y</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include..;.\include;.;..\..\..\sdk\include;%3bD:\xsharp\sdk\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;XCELL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>msxml2.lib;Msimg32.lib;comctl32.lib;UxTheme.lib;shlwapi.lib;Ws2_32.lib;xbase.lib;xutil.lib;xframe.lib;xofbase.lib;xofobject.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\sdk\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>xcell.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)..\build\pdb\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>..\..\..\sdk\lib\$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>del ..\..\..\bin\*.ilk</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>xcopy include ..\..\..\sdk\include  /y</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include..;.\include;.;..\..\..\sdk\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;XCELL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>msxml2.lib;Msimg32.lib;comctl32.lib;UxTheme.lib;shlwapi.lib;Ws2_32.lib;xbase.lib;xutil.lib;xframe.lib;xofbase.lib;xofobject.lib;gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\sdk\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>xcell.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)..\build\pdb\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>..\..\..\sdk\lib\$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>del ..\..\..\bin\*.ilk</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="xcell.cpp" />
+    <ClCompile Include="src\AttribSvr.cpp" />
+    <ClCompile Include="src\AxisSvr.cpp" />
+    <ClCompile Include="src\CellProp.cpp" />
+    <ClCompile Include="src\CellSvr.cpp" />
+    <ClCompile Include="src\ColHeaderSvr.cpp" />
+    <ClCompile Include="src\ContentSvr.cpp" />
+    <ClCompile Include="src\DataStoreSvr.cpp" />
+    <ClCompile Include="src\DwTable.cpp" />
+    <ClCompile Include="src\EditSvr.cpp" />
+    <ClCompile Include="src\FormatSvr.cpp" />
+    <ClCompile Include="src\FormulaSvr.cpp" />
+    <ClCompile Include="src\GridDataSvr.cpp" />
+    <ClCompile Include="src\GridFrameSvr.cpp" />
+    <ClCompile Include="src\hxComplier.cpp" />
+    <ClCompile Include="src\IDwTable.cpp" />
+    <ClCompile Include="src\IXCell.cpp" />
+    <ClCompile Include="src\NameSvr.cpp" />
+    <ClCompile Include="src\NoteSvr.cpp" />
+    <ClCompile Include="src\optionsvr.cpp" />
+    <ClCompile Include="src\ReportBand.cpp" />
+    <ClCompile Include="src\RowSelectorSvr.cpp" />
+    <ClCompile Include="src\SpanRectSvr.cpp" />
+    <ClCompile Include="src\TemplDefSvr.cpp" />
+    <ClCompile Include="src\XCellQueryDlg.cpp" />
+    <ClCompile Include="src\XCellSerializeSvr.cpp" />
+    <ClCompile Include="src\XCellSheet.cpp" />
+    <ClCompile Include="src\XCellSheetSvr.cpp" />
+    <ClCompile Include="src\XCellStyleSvr.cpp" />
+    <ClCompile Include="src\XGroupDlg.cpp" />
+    <ClCompile Include="src\IGridReport.cpp" />
+    <ClCompile Include="src\XGridDataSvrEx.cpp" />
+    <ClCompile Include="src\XGridEditSvr.cpp" />
+    <ClCompile Include="src\XGridHeaderEx.cpp" />
+    <ClCompile Include="src\XGridReport.cpp" />
+    <ClCompile Include="src\XGridRowSelector.cpp" />
+    <ClCompile Include="src\XGridSheetEx.cpp" />
+    <ClCompile Include="src\XGridSheetSvrEx.cpp" />
+    <ClCompile Include="src\IBIReport.cpp" />
+    <ClCompile Include="src\XBIReportDataSvr.cpp" />
+    <ClCompile Include="src\XBIReportObject.cpp" />
+    <ClCompile Include="src\XBIReportSerializeSvr.cpp" />
+    <ClCompile Include="src\XBIReportSheet.cpp" />
+    <ClCompile Include="src\XBIReportSheetSvr.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="xcell.def" />
+    <None Include="..\..\..\..\cell\cellbase\res\ArrowNS.cur" />
+    <None Include="res\ArrowNS.cur" />
+    <None Include="..\..\..\..\cell\cellbase\res\ArrowWE.cur" />
+    <None Include="res\ArrowWE.cur" />
+    <None Include="..\..\..\..\cell\cellbase\res\Clear.cur" />
+    <None Include="res\Clear.cur" />
+    <None Include="..\..\..\..\cell\cellbase\res\Filling.cur" />
+    <None Include="res\filling.cur" />
+    <None Include="res\Move.cur" />
+    <None Include="res\Moving.cur" />
+    <None Include="..\..\..\..\cell\cellbase\res\Pen.cur" />
+    <None Include="res\Pen.cur" />
+    <None Include="res\PENCIL.CUR" />
+    <None Include="..\..\..\..\cell\cellbase\res\PENCIL.CUR" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="include\AddrSvr.hpp" />
+    <ClInclude Include="include\AttribSvr.hpp" />
+    <ClInclude Include="include\AxisSvr.hpp" />
+    <ClInclude Include="include\CellProp.hpp" />
+    <ClInclude Include="include\CellSvr.hpp" />
+    <ClInclude Include="include\ColHeaderSvr.hpp" />
+    <ClInclude Include="include\ContentSvr.hpp" />
+    <ClInclude Include="include\DataStoreSvr.hpp" />
+    <ClInclude Include="include\DwTable.hpp" />
+    <ClInclude Include="include\EditSvr.hpp" />
+    <ClInclude Include="include\FormatSvr.hpp" />
+    <ClInclude Include="include\FormulaSvr.hpp" />
+    <ClInclude Include="include\GridDataSvr.hpp" />
+    <ClInclude Include="include\GridFrameSvr.hpp" />
+    <ClInclude Include="include\hxComplier.h" />
+    <ClInclude Include="include\IDwTable.hpp" />
+    <ClInclude Include="include\IDwTableObServer.hpp" />
+    <ClInclude Include="include\IDWView.hpp" />
+    <ClInclude Include="include\IXCell.hpp" />
+    <ClInclude Include="include\NameSvr.hpp" />
+    <ClInclude Include="include\NoteSvr.hpp" />
+    <ClInclude Include="include\OptionSvr.hpp" />
+    <ClInclude Include="include\ReportBand.hpp" />
+    <ClInclude Include="include\RowSelectorSvr.hpp" />
+    <ClInclude Include="include\SpanRectSvr.hpp" />
+    <ClInclude Include="include\TemplDefSvr.hpp" />
+    <ClInclude Include="include\xcell.h" />
+    <ClInclude Include="include\xcelldef.hpp" />
+    <ClInclude Include="include\XCellQueryDlg.hpp" />
+    <ClInclude Include="include\XCellSerializeSvr.hpp" />
+    <ClInclude Include="include\XCellSheet.hpp" />
+    <ClInclude Include="include\XCellSheetSvr.hpp" />
+    <ClInclude Include="include\XCellStyleSvr.hpp" />
+    <ClInclude Include="include\XGroupDlg.hpp" />
+    <ClInclude Include="include\IGridReport.hpp" />
+    <ClInclude Include="include\IGridReportObserver.hpp" />
+    <ClInclude Include="include\XGridDataSvrEx.hpp" />
+    <ClInclude Include="include\XGridEditSvr.hpp" />
+    <ClInclude Include="include\XGridHeaderEx.hpp" />
+    <ClInclude Include="include\XGridReport.hpp" />
+    <ClInclude Include="include\XGridRowSelector.hpp" />
+    <ClInclude Include="include\XGridSheetEx.hpp" />
+    <ClInclude Include="include\XGridSheetSvrEx.hpp" />
+    <ClInclude Include="include\IBIReport.hpp" />
+    <ClInclude Include="include\XBIReportDataSvr.hpp" />
+    <ClInclude Include="include\XBIReportObject.hpp" />
+    <ClInclude Include="include\XBIReportSerializeSvr.hpp" />
+    <ClInclude Include="include\XBIReportSheet.hpp" />
+    <ClInclude Include="include\XBIReportSheetSvr.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="XCell.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

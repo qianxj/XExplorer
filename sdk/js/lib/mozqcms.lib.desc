@@ -1,0 +1,1 @@
+OBJS = c:\ff-debug\gfx\qcms\iccread.obj c:\ff-debug\gfx\qcms\transform.obj c:\ff-debug\gfx\qcms\transform-sse2.obj c:\ff-debug\gfx\qcms\transform-sse1.obj

@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C313CA81-5755-41C9-ACE7-0044E85433E1}</ProjectGuid>
+    <RootNamespace>XFrame</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\build\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\build\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>xcopy include ..\sdk\include  /y</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;.\include;.;..\sdk\include;..\sdk\js\include;..\sdk\vl\include;..\sdk\vl\include\vl;..\sdk\vl\include\lexer;..\sdk\vl\include\parser;..\sdk\xsm\include;..\sdk\xsm\include\xsm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;XFRAME_EXPORTS;JS_SUPPER1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>msxml2.lib;Msimg32.lib;comctl32.lib;UxTheme.lib;Ws2_32.lib;xutil.lib;xbase.lib;shlwapi.lib;hxsock.lib;xvm.lib;xshape.lib;xsm.lib;mozjs.lib;vlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\sdk\lib;..\sdk\js\lib;..\sdk\vl\lib;..\sdk\xsm\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>xframe.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)\..\build\pdb\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>..\sdk\lib\$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>del ..\bin\*.ilk</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>xcopy include ..\sdk\include  /y</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;.\include;.;..\sdk\include;..\..\xsharp\sdk\include;..\..\xsharp\sdk\include\xsm;..\sdk\js\include;..\sdk\vl\include;..\sdk\vl\include\vl;..\sdk\vl\include\lexer;..\sdk\vl\include\parser;..\sdk\xsm\include;..\sdk\xsm\include\xsm;..\sdk\xsm\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;XFRAME_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>msxml2.lib;Msimg32.lib;comctl32.lib;UxTheme.lib;Ws2_32.lib;xutil.lib;xbase.lib;shlwapi.lib;hxsock.lib;xvm.lib;xshape.lib;xsm.lib;mozjs.lib;vlang.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\sdk\lib;..\..\xsharp\sdk\lib;..\sdk\js\lib;..\sdk\vl\lib;..\sdk\xsm\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>xframe.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)\..\build\pdb\$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>..\sdk\lib\$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>del ..\bin\*.ilk</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="XFrame.cpp" />
+    <ClCompile Include="src\IEntitySvr.cpp" />
+    <ClCompile Include="src\IMail.cpp" />
+    <ClCompile Include="src\ISvrTree.cpp" />
+    <ClCompile Include="src\ITrans.cpp" />
+    <ClCompile Include="src\IXAServer.cpp" />
+    <ClCompile Include="src\IXAServerArg.cpp" />
+    <ClCompile Include="src\IXFControl.cpp" />
+    <ClCompile Include="src\IXFWin.cpp" />
+    <ClCompile Include="src\IXNode.cpp" />
+    <ClCompile Include="src\IXPage.cpp" />
+    <ClCompile Include="src\xfApp.cpp" />
+    <ClCompile Include="src\xfAreaObject.cpp" />
+    <ClCompile Include="src\xfAuthMgr.cpp" />
+    <ClCompile Include="src\xfCacheMgr.cpp" />
+    <ClCompile Include="src\xfConnect.cpp" />
+    <ClCompile Include="src\xfControl.cpp" />
+    <ClCompile Include="src\xfMdiFrame.cpp" />
+    <ClCompile Include="src\xfNetwork.cpp" />
+    <ClCompile Include="src\xfNode.cpp" />
+    <ClCompile Include="src\xfNodeBox.cpp" />
+    <ClCompile Include="src\xfNodeControl.cpp" />
+    <ClCompile Include="src\xfNodeLayer.cpp" />
+    <ClCompile Include="src\xfNodeLayers.cpp" />
+    <ClCompile Include="src\xfNodeResource.cpp" />
+    <ClCompile Include="src\xfNodeScript.cpp" />
+    <ClCompile Include="src\xfNodeWin.cpp" />
+    <ClCompile Include="src\xfNodeXPage.cpp" />
+    <ClCompile Include="src\xfResourceMgr.cpp" />
+    <ClCompile Include="src\xfUriLoader.cpp" />
+    <ClCompile Include="src\xfWin.cpp" />
+    <ClCompile Include="src\xfWinbase.cpp" />
+    <ClCompile Include="src\xfXPage.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="xframe.def" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="include\IEntitySvr.hpp" />
+    <ClInclude Include="include\IMail.hpp" />
+    <ClInclude Include="include\ISvrTree.hpp" />
+    <ClInclude Include="include\ITrans.hpp" />
+    <ClInclude Include="include\IXAServer.hpp" />
+    <ClInclude Include="include\IXAServerArg.hpp" />
+    <ClInclude Include="include\IXFControl.hpp" />
+    <ClInclude Include="include\IXFWin.hpp" />
+    <ClInclude Include="include\IXNode.hpp" />
+    <ClInclude Include="include\IXPage.hpp" />
+    <ClInclude Include="include\XEvt.hpp" />
+    <ClInclude Include="include\xfApp.hpp" />
+    <ClInclude Include="include\xfAreaObject.hpp" />
+    <ClInclude Include="include\xfAuthMgr.hpp" />
+    <ClInclude Include="include\xfCacheMgr.hpp" />
+    <ClInclude Include="include\xfConnect.hpp" />
+    <ClInclude Include="include\xfControl.hpp" />
+    <ClInclude Include="include\xfMdiFrame.hpp" />
+    <ClInclude Include="include\xfNetwork.hpp" />
+    <ClInclude Include="include\xfNode.hpp" />
+    <ClInclude Include="include\xfNodeBox.hpp" />
+    <ClInclude Include="include\xfNodeControl.hpp" />
+    <ClInclude Include="include\xfNodeLayer.hpp" />
+    <ClInclude Include="include\xfNodeLayers.hpp" />
+    <ClInclude Include="include\xfNodeResource.hpp" />
+    <ClInclude Include="include\xfNodeScript.hpp" />
+    <ClInclude Include="include\xfNodeWin.hpp" />
+    <ClInclude Include="include\xfNodeXPage.hpp" />
+    <ClInclude Include="include\xframe.h" />
+    <ClInclude Include="include\xfResourceMgr.hpp" />
+    <ClInclude Include="include\xfUriLoader.hpp" />
+    <ClInclude Include="include\xfWin.hpp" />
+    <ClInclude Include="include\xfWinbase.hpp" />
+    <ClInclude Include="include\xfXPage.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="XFrame.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,22 @@
+native HWND(HWND);
+native HDC(HDC); 
+native RECT(RECT);
+native LPRECT(LPRECT);
+[ref] native RECTREF(RECT);
+native LPTSTR(LPTSTR);
+native LPVOID(LPVOID);
+native LPIXMLDOMNode(IXMLDOMNode*);
+native LPIXMLDOMElement(IXMLDOMElement*);
+native LPIXMLDOMDocument(IXMLDOMDocument*);
+native LPxfNode(xfNode *);
+native IIDREF(xfNode *);
+native LPTBoxStyle(XUtil::Css::TBoxStyle*);
+native LPCTBoxStyle(const XUtil::Css::TBoxStyle*);
+native DWORD(DWORD);
+native LPCTSTR(LPCTSTR);
+
+native LPCssStyle(XUtil::xuCCssStyle *);
+
+
+
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="gb2312"?>
+<propSheet>
+<row category="group" level="1" label="First Group" type="rcolumn" expand="true"/>
+<row category="item" level="2" label="item 1" type="rcolumn" expand="true"/>
+<row category="item" level="2" label="item 2" type="rcolumn" expand="true"/>
+<row category="item" level="2" label="item 3" type="rcolumn" expand="true"/>
+<row category="group" level="1" label="Two Group" type="rcolumn" expand="true"/>
+<row category="item" level="2" label="item 5" type="rcolumn" expand="true"/>
+<row category="item" level="2" label="item 6" type="rcolumn" expand="true"/>
+<row category="gitem" level="2" label="item 7" type="rcolumn" expand="true"/>
+<row category="item" level="3" label="item 7.1" type="rcolumn" expand="true"/>
+<row category="gitem" level="3" label="item 7.2" type="rcolumn" expand="true"/>
+<row category="item" level="4" label="item 7.2.1" type="rcolumn" expand="true"/>
+<row category="item" level="4" label="item 7.2.2" type="rcolumn" expand="true"/>
+<row category="item" level="4" label="item 7.2.3" type="rcolumn" expand="true"/>
+<row category="item" level="3" label="item 7.3" type="rcolumn" expand="true"/>
+<row category="item" level="3" label="item 7.4" type="rcolumn" expand="true"/>
+<row category="item" level="2" label="item 8" type="rcolumn" expand="true"/>
+</propSheet>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="gb2312"?>
+<templates>
+	<template name="xpage">
+		<box>
+			<layers tabarrow="bottom">
+				<layer caption="xpage" hidden="false" style="margin:2"><box><xsedit id="xpageeditctrl"/></box></layer>
+				<layer caption="xframe" hidden="false" style="background:#ececec"><box style="margin:6;border:solid 2 #cccccc"><xwindesign id="designframe"/></box></layer>
+				<layer caption="xscript" hidden="false" style="margin:2"><box><xsedit id="xscripteditctrl"/></box></layer>
+				<layer caption="cpp code" hidden="false" style="margin:2"><box><xsedit id="cppeditctrl"/></box></layer>
+			</layers>
+		</box>
+	</template>
+	<template name="xentry">
+		<box>
+			<layers tabarrow="bottom">
+				<layer caption="模式"><box><xsedit id="xpageeditctrl"/></box><box resize="yes" width="240">
+                                              <xtree imagelist="0">
+                                                   <treeitem src="D:\XProjects\XBusiness\trade\dtl.xml" xroot="/" xpath="订单" xcaption="name()" image="25" loop="yes"/>
+                                              </xtree>
+                                              </box></layer>
+				<layer caption="序列化"><box><xsedit id="serialeditctrl"/></box></layer>
+			</layers>
+		</box>
+	</template>
+	<template name="xcppcode">
+		<box>
+			<box><xsedit id="xpageeditctrl"/></box>
+		</box>
+	</template>
+	<template name="xml">
+		<box>
+			<box><xsedit id="xpageeditctrl"/></box>
+		</box>
+	</template>
+	<template name="xcell">
+		<box>
+			<box><xcell id="xcellctrl"/></box>
+		</box>
+	</template>
+	<template name="ximage">
+		<box>
+			<box></box>
+		</box>
+	</template>
+</templates>

@@ -1,0 +1,4 @@
+#ifndef  WPP_BNF_CPP_PROC_H
+#define  WPP_BNF_CPP_PROCE_H
+
+#endif //WPP_BNF_CPP_PROC_H

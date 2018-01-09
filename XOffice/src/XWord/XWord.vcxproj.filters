@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="源文件\src">
+      <UniqueIdentifier>{f73212d8-a082-4d8b-b00c-d6823d3ae73b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="头文件\include">
+      <UniqueIdentifier>{1eafa51b-0f5c-49a6-8e5c-948a6ec543a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{cbb168f2-af1b-4936-a7c1-77184f6ec5df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="layer">
+      <UniqueIdentifier>{3e8b626d-6dfb-4e16-a12b-5fa95d9a5222}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="view">
+      <UniqueIdentifier>{a640d2f6-dcf6-4ce4-b1cd-2ca10d46a0a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{21bdba2c-311b-4f22-809d-3831df0ee992}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="style">
+      <UniqueIdentifier>{9165ad78-6701-4ae1-82d9-3a6c58dfa5ee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="XWord.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XFlowChapter.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XFlowDocument.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XFlowItem.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XFlowPara.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordConer.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordContentSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordDataSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordHRuler.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordLayer.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordSerializeSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordSerializeSvrEx.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordSheet.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordSheetSvr.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordVRuler.cpp">
+      <Filter>源文件\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordPage.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordText.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordLayerBase.cpp">
+      <Filter>layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordLayerChapter.cpp">
+      <Filter>layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordLayerDocument.cpp">
+      <Filter>layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordLayerPage.cpp">
+      <Filter>layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordLayerPara.cpp">
+      <Filter>layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordCursor.cpp">
+      <Filter>view</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordDevice.cpp">
+      <Filter>view</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordView.cpp">
+      <Filter>view</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordBlock.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordBlockMgr.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordStyle.cpp">
+      <Filter>style</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XWordTextMeta.cpp">
+      <Filter>style</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="xword.def">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XFlowChapter.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XFlowDocument.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XFlowItem.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XFlowPara.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWord.h">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordConer.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordContentSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordDataSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordHRuler.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordLayer.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordSerializeSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordSerializeSvrEx.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordSheet.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordSheetSvr.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordVRuler.hpp">
+      <Filter>头文件\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xtree.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordPage.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordText.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordLayerBase.hpp">
+      <Filter>layer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordLayerChapter.hpp">
+      <Filter>layer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordLayerDocument.hpp">
+      <Filter>layer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordLayerPage.hpp">
+      <Filter>layer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordLayerPara.hpp">
+      <Filter>layer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordCursor.hpp">
+      <Filter>view</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordDevice.hpp">
+      <Filter>view</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordView.hpp">
+      <Filter>view</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordBlock.hpp">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordBlockMgr.hpp">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordStyle.hpp">
+      <Filter>style</Filter>
+    </ClInclude>
+    <ClInclude Include="include\XWordTextMeta.hpp">
+      <Filter>style</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

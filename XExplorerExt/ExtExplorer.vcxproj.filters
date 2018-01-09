@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AuthWin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DataAnalysis.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DataSchemaDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DevFrame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DevSchema.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DevView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DevWorkDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DevXQuery.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityExplorer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityMaint.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtExplorer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FavoritesDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MailView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MdiFrame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ModulaDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="officeFrame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="rulersheet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkFrame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkNodeDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkStart.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkStartex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xCodeSheet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xdvsheet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xfilesheet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xmodesheet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xPageSheet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xXmlsheet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExtExplorer.def">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AuthWin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DataAnalysis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DataSchemaDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DevFrame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DevSchema.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DevView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DevWorkDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DevXQuery.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityExplorer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityMaint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FavoritesDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MailView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MdiFrame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ModulaDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="officeFrame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rulerSheet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkFrame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkNodeDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkStart.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkStartex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xCodeSheet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xdvSheet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xfileSheet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xmodeSheet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="xPageSheet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

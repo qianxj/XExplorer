@@ -1,0 +1,23 @@
+#include "vxiunknown.xdl"
+%{C++
+#include "unknwn.h"
+#define XAPI
+#define XEVENT
+#define XIMETHOD virtual STDMETHODIMP
+#define XIMETHOD_(x) virtual STDMETHODIMP_(x)
+#define XOUTPARAM
+
+namespace Hxsoft{ namespace XFrame
+{ 
+%}
+
+[scriptenabled, uuid(6C30B294-F55E-4f5b-AFFC-6F0C5D017D15),notxpcom]
+interface vxIObject : IUnknown{
+		boolean  setClassName(in LPTSTR pStrUri,in LPTSTR pStrClassName); 
+		LPCTSTR  getClassName(in LPTSTR pStrUri); 
+};
+
+%{C++
+}}
+%}
+
